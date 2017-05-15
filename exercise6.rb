@@ -11,6 +11,11 @@ energy = 5
 
 loop do
 
+  if (energy <= 0)
+    puts "You're too tired. Go home!"
+    exit
+  end
+
   puts "Walk, run, or go home? Press \'w\' or \'r\' or \'g\', and hit Enter."
 
   activity = gets.chomp
@@ -29,10 +34,6 @@ loop do
 
     elsif (activity == "g")
       puts "Okay, bye!"
-      exit
-
-    elsif (energy <= 0)
-      puts "You're too tired. Nap time!"
       exit
 
     else
