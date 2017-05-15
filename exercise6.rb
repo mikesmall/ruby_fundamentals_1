@@ -6,28 +6,37 @@
 
 # If they run, their total distance should go up by 5. You should keep asking for input - you don't know where you're going until you get there!
 
-travel_distance = 0
+distance = 0
+energy = 5
 
 loop do
 
-  puts "Walk, run, or go home? Press either \'w\' or \'r\' and hit Enter. To go home, press any key."
+  puts "Walk, run, or go home? Press \'w\' or \'r\' or \'g\', and hit Enter."
 
-  what_to_do = gets.chomp
+  activity = gets.chomp
 
-    if what_to_do == "w"
-      travel_distance = travel_distance + 1
-      puts "Distance from home is #{travel_distance.to_s} km."
+    if (activity == "w")
+      distance = (distance + 1)
+      energy = (energy + 1)
+      puts "Distance from home is #{distance.to_s} km."
+      puts "Your energy just went up a little!"
 
-    elsif what_to_do == "r"
-      travel_distance = travel_distance + 5
-      puts "Distance from home is #{travel_distance.to_s} km."
+    elsif (activity == "r")
+      distance = (distance + 5)
+      energy = (energy - 1)
+      puts "Distance from home is #{distance.to_s} km."
+      puts "Your energy just went down a little."
 
-    elsif what_to_do == "g"
+    elsif (activity == "g")
       puts "Okay, bye!"
       exit
 
+    elsif (energy <= 0)
+      puts "You're too tired. Nap time!"
+      exit
+
     else
-      puts "That's not walking, running, OR going home!"
+      puts "That's not walking, running, OR going home! Try again:"
 
   end
 
