@@ -21,8 +21,15 @@ puts result.to_s
 # 3.
 # Try outputting the result of 45628 multiplied by 7839 in a sentence by using string interpolation.
 
+puts "Ruby seems pretty sure that 45628, when multiplied by 7839, equals #{45628 * 7839}."
 
 
 
 # 4.
 # What's the value of the expression (10 < 20 && 30 < 20) || !(10 == 11)? Try figuring it out on your own before typing it in.
+
+      # I don't understand the question. Figure it out in my head? I'm not a cyborg! Yet...
+
+puts (10 < 20 && 30 < 20) || !(10 == 11)
+
+      # Now that I've seen the result in Terminal, I know you meant "True or False." Ha! I thought I was supposed to be doing an equation here... 
